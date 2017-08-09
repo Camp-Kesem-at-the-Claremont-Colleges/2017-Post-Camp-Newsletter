@@ -135,3 +135,106 @@
     -webkit-transition: all 0.3s 1s ease-out;  
             transition: all 0.3s 1s ease-out;
 }
+/* Modals */
+.back-to-home-button a {
+    font-weight: 500;
+}
+.modal {
+    top: 25%;
+}
+.close-modal {
+    float: left;
+    margin-left: 10px;
+}
+.float-right {
+    float: right;
+    margin-right: 10px;
+}
+.article-actions {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.article-actions span button.btn-base-brd-slide {
+    font-size: 13px;
+    font-weight: 500;
+}
+.article-logo {
+    width: 100px;
+}
+.counters-overflow  {
+    overflow:hidden;
+}
+.separation {
+    margin-bottom: 100px;
+}
+.modal-img-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.modal-img-container img {
+    max-width: 75%;
+}
+.section-modal {
+    overflow: hidden;
+}
+.share-me {
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+.text-center {
+    text-align: center;
+}
+
+.fun-btn {
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 15px 40px;
+    display: inline-block;
+    margin: 5px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.fun-btn2 {
+    background: #95d60a;
+    color: #fff;
+    box-shadow: 0 6px #00c18a;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 40px;
+}
+
+.fun-btn2:hover {
+    box-shadow: 0 4px #00c18a;
+    top: 2px;
+}
+
+video {
+    border-radius: 100%;
+}
+
+video:after {
+    border-color: hsla(0,0%,100%,0) hsla(0,0%,100%,0) hsla(0,0%,100%,0) #fff;
+    border-style: solid;
+    border-width: 20px 0 20px 30px;
+    content: "";
+    height: 0;
+    margin-left: 4px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transition: all .4s cubic-bezier(.18,.89,.34,1.52);
+    top: 50%;
+    width: 0;
+}

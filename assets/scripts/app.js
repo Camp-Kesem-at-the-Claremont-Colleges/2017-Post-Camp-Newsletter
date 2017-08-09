@@ -18,13 +18,31 @@ var randomQ = Math.floor(Math.random() * totalQ);
 var loadQuote = $('<h2 id="quote-load">"' + quotes[randomQ] + '"</h2><h2>' + authors[randomQ] + '</h2><img class="loading-icon" src="/assets/img/loading-ring.gif">').hide().fadeIn(1500);
 $('#quote').append(loadQuote);
 
-// loading finished
+// preloading
 $(document).ready(function() {
  
     setTimeout(function(){
         $('body').addClass('loaded');
-    }, 1);
+    }, 3000);
  
+});
+
+// modals
+$("#brownbags-modal-button").animatedModal({
+    modalTarget:'brownbags-modal',
+    animatedIn:'fadeInUp',
+    animatedOut:'fadeOutDown',
+    color:'#fff'
+});
+
+// social-sharing
+var hostSite = "2017.campkesemclaremont.us";
+$("#share-brownbags").jsSocials({
+    url: "http://" + hostSite + "/client-spotlight",
+    text: "SOURCE Client Spotlight - Pacific Lifeline",
+    shares: ["email", "twitter", "facebook", "googleplus", "linkedin"],
+    showCount: false
+    
 });
 
 // Core Javascript Initialization
