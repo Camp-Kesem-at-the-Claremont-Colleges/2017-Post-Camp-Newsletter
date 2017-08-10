@@ -255,3 +255,20 @@ video:after {
 section {
     position: relative;
 }
+
+#home:after {
+    background: url('../img/cloud.png') repeat-x 0 0;
+    background-size: 250px 100px;
+    content: "";
+    height: 250px;
+    left: 0;
+    margin-bottom: -50px;
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    z-index: 100;
+}
+
+#about {
+    background: #87CEFA;
+}
