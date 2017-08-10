@@ -238,3 +238,20 @@ video:after {
     top: 50%;
     width: 0;
 }
+
+.test:before {
+    background: url('../img/sunset1.png') repeat-x 0 0;
+    background-size: 134px 50px;
+    content: "";
+    height: 50px;
+    left: 0;
+    margin-bottom: -50px;
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+
+/* Before after styling help */
+section {
+    position: relative;
+}

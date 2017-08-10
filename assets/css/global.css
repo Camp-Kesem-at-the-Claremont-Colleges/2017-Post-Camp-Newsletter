@@ -15043,9 +15043,9 @@ fieldset[disabled] .btn-ig-bg {
     [Heading v1]
 ------------------------------------------------------------------*/
 .heading-v1 .heading-v1-title {
-  font-size: 28px;
+  font-size: 50px;
   font-style: italic;
-  font-family: Droid Serif, serif;
+  font-family: 'Amatic SC', sans-serif;
 }
 
 .heading-v1 .heading-v1-subtitle {
@@ -27747,7 +27747,7 @@ fieldset[disabled] .btn-ig-bg {
 .footer-v7 {
   position: relative;
   z-index: 1;
-  background: url(../../assets/img/1920x1080/15.jpg) no-repeat;
+  background-color: #000;
   background-size: cover;
   background-position: center center;
 }
