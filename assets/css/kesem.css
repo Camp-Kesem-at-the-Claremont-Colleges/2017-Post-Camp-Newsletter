@@ -257,18 +257,25 @@ section {
 }
 
 #home:after {
-    background: url('../img/cloud.png') repeat-x 0 0;
-    background-size: 250px 100px;
+    background: url('../img/splotchTop.png') 0 0;
+    background-size: 1200px 188px;
     content: "";
-    height: 250px;
+    height: 188px;
     left: 0;
     margin-bottom: -50px;
     position: absolute;
     right: 0;
-    bottom: -200px;
-    z-index: 100;
+    bottom: -130px;
 }
-
-#about {
-    background: #87CEFA;
+#about:after {
+    background: url('../img/splotchBottom.png') 0 0;
+    background-size: 1200px 188px;
+    content: "";
+    height: 188px;
+    left: 0;
+    margin-bottom: -50px;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    z-index: -1;
 }
