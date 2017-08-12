@@ -15,7 +15,7 @@ quotes[{{ i }}] = {{ quote.quote }};
 {% endfor %}
 var totalQ = {{ i }};
 var randomQ = Math.floor(Math.random() * totalQ);
-var loadQuote = $('<h2 id="quote-load">"' + quotes[randomQ] + '"</h2><h2>' + authors[randomQ] + '</h2><img class="loading-icon" src="/assets/img/loading-ring.gif">').hide().fadeIn(1500);
+var loadQuote = $('<h2 id="quote-load">"' + quotes[randomQ] + '"</h2><h2>' + authors[randomQ] + '</h2><img class="loading-icon animate-flicker" src="/assets/img/sun.png">').hide().fadeIn(1500);
 $('#quote').append(loadQuote);
 
 // preloading
