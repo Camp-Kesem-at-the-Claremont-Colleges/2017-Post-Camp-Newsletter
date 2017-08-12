@@ -276,8 +276,23 @@ section {
     margin-bottom: -50px;
     position: absolute;
     right: 0;
-    bottom: 50px;
-    z-index: -1;
+    bottom: 0px;
+    z-index: 1;
+}
+
+#history:before {
+    background: url('../img/cloud-cover.png') 0 0;
+    background-size: 1920px 288px;
+    content: "";
+    height: 288px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+}
+
+.cloud-push {
+    padding-top: 196px;
 }
 
 @keyframes flickerAnimation {
@@ -305,4 +320,12 @@ section {
    -moz-animation: flickerAnimation 2s infinite;
    -o-animation: flickerAnimation 2s infinite;
     animation: flickerAnimation 2s infinite;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
 }
