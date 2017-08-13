@@ -28,8 +28,8 @@ $(document).ready(function() {
 });
 
 // modals
-$("#brownbags-modal-button").animatedModal({
-    modalTarget:'brownbags-modal',
+$("#camp-activities-modal-button").animatedModal({
+    modalTarget:'camp-activities-modal',
     animatedIn:'fadeInUp',
     animatedOut:'fadeOutDown',
     color:'#fff'
@@ -37,9 +37,9 @@ $("#brownbags-modal-button").animatedModal({
 
 // social-sharing
 var hostSite = "2017.campkesemclaremont.us";
-$("#share-brownbags").jsSocials({
+$("#share-camp-activities").jsSocials({
     url: "http://" + hostSite + "/client-spotlight",
-    text: "SOURCE Client Spotlight - Pacific Lifeline",
+    text: "Camp Activities Recap - Camp Kesem at the Claremont Colleges",
     shares: ["email", "twitter", "facebook", "googleplus", "linkedin"],
     showCount: false
     

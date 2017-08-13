@@ -291,8 +291,19 @@ section {
     top: 0px;
 }
 
+#history:after {
+    background: url('../img/day-ground.png') 0 0;
+    background-size: 1920px 432px;
+    content: "";
+    height: 432px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+
 .cloud-push {
-    padding-top: 196px;
+    padding-top: 288px;
 }
 
 @keyframes flickerAnimation {
@@ -328,4 +339,35 @@ section {
 
 .margin-bottom-30 {
     margin-bottom: 30px;
+}
+
+.bg-color-blue-sky {
+  background: #335B96 !important;
+  padding-bottom: 432px;
+}
+
+.blue-heading-v1 {
+    color: #fff;
+}
+
+.blue-subheading {
+    color: #faebd7;
+}
+
+.white-boxed {
+    background: #fff;
+}
+
+@media (min-width: 1200px) {
+    .cloud-push {
+        width: 1050px;
+    }
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px;
+}
+
+.padding-top-20 {
+    padding-top: 20px;
 }
