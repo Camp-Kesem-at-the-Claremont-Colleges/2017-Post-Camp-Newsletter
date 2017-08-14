@@ -40622,7 +40622,7 @@ fieldset[disabled] .btn-ig-bg {
 /* Media Queries below 1200px */
 @media (min-width: 1200px) {
   .container-sm {
-    width: 970px;
+    width: 950px;
   }
 }
 

@@ -274,7 +274,7 @@ section {
     z-index: 1;
 }
 
-#history:before {
+#re-camp:before {
     background: url('../img/cloud-cover.png') 0 0;
     background-size: 1920px 288px;
     content: "";
@@ -285,7 +285,7 @@ section {
     top: 0px;
 }
 
-#history:after {
+#re-camp:after {
     background: url('../img/day-ground.png') 0 0;
     background-size: 1920px 432px;
     content: "";
@@ -383,7 +383,7 @@ section {
 
 .bg-color-starry-night {
     background: url('../img/starry-night.jpg');
-    background-repeat: repeat-y;
+    background-repeat: repeat;
     padding-bottom: 368px;
 }
 
