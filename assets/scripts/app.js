@@ -27,23 +27,24 @@ $(document).ready(function() {
  
 });
 
+var hostSite = "2017.campkesemclaremont.us";
+{% for modal in site.data.articles %}
 // modals
-$("#camp-activities-modal-button").animatedModal({
-    modalTarget:'camp-activities-modal',
+$("#{{ modal.id }}-modal-button").animatedModal({
+    modalTarget:'{{ modal.id }}-modal',
     animatedIn:'fadeInUp',
     animatedOut:'fadeOutDown',
     color:'#fff'
 });
 
 // social-sharing
-var hostSite = "2017.campkesemclaremont.us";
-$("#share-camp-activities").jsSocials({
-    url: "http://" + hostSite + "/client-spotlight",
-    text: "Camp Activities Recap - Camp Kesem at the Claremont Colleges",
+$("#share-{{ modal.id }}").jsSocials({
+    url: "http://" + hostSite + "/{{ modal.id }}",
+    text: "{{ modal.title }} - Camp Kesem at the Claremont Colleges",
     shares: ["email", "twitter", "facebook", "googleplus", "linkedin"],
     showCount: false
-    
 });
+{% endfor %}
 
 // Core Javascript Initialization
 var App = function() {
