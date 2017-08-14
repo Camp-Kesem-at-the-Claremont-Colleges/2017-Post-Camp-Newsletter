@@ -209,7 +209,6 @@
 
 video {
     border-radius: 100%;
-    width: 355px;
 }
 
 video:hover {
@@ -352,6 +351,10 @@ section {
 .bg-color-blue-sky {
   background: #335B96 !important;
   padding-bottom: 432px;
+}
+
+.heading-v1 .heading-v1-title {
+    margin-bottom: 0px;
 }
 
 .blue-heading-v1 {
