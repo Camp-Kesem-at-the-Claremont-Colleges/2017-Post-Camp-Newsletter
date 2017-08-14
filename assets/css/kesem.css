@@ -245,19 +245,6 @@ video:hover {
     width: 0;
 }
 
-
-.test:before {
-    background: url('../img/sunset1.png') repeat-x 0 0;
-    background-size: 134px 50px;
-    content: "";
-    height: 50px;
-    left: 0;
-    margin-bottom: -50px;
-    position: absolute;
-    right: 0;
-    top: -50px;
-}
-
 /* Before after styling help */
 section {
     position: relative;
@@ -316,6 +303,34 @@ section {
     background: -o-linear-gradient(#573b0c, #000);
     background: linear-gradient(#573b0c, #000); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax */
     height: 300px;
+}
+
+#empowerment:after {
+    background: -webkit-linear-gradient(transparent, #000080);
+    background: -moz-linear-gradient(transparent, #000080);
+    background: -o-linear-gradient(transparent, #000080);
+    background: linear-gradient(transparent, #000080); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax */
+    content: "";
+    opacity: .75;
+    height: 500px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.test:before {
+    background: url('../img/sunset1.png') repeat-x 0 0;
+    background-size: 134px 50px;
+    content: "";
+    height: 50px;
+    left: 0;
+    margin-bottom: -50px;
+    position: absolute;
+    right: 0;
+    top: -50px;
+    z-index: 2;
 }
 
 .cloud-push {
@@ -387,9 +402,9 @@ section {
     background: #fff;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
     .cloud-push {
-        width: 1050px;
+        width: 1200px;
     }
 }
 
@@ -397,6 +412,18 @@ section {
     padding-bottom: 20px;
 }
 
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
 .padding-top-20 {
     padding-top: 20px;
+}
+
+.padding-top-50 {
+    padding-top: 50px;
+}
+
+.no-top-padding {
+    padding-top: 0;
 }
