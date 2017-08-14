@@ -836,6 +836,35 @@
                         </div>
                         <!-- End Interactive Banner v2 -->
                     </div>
+                    <div id="counselors" class="white-boxed content-md container">
+                        <!-- Heading v1 -->
+                        <div class="heading-v1 text-center margin-b-80">
+                            <h2 class="heading-v1-title">Counselors, Admin, and Pro Staff!</h2>
+                            <p class="heading-v1-text">Meet everyone who volunteered their week at camp!</p>
+                        </div>
+                        <!-- End Heading v1 -->
+
+                        <!-- Masonry Grid -->
+                        <div class="masonry-grid margin-b-40">
+                            {% for counselor in site.data.counselors %}
+                            <div class="masonry-grid-item col-2">
+                                <!-- News v1 -->
+                                <article class="news-v1">
+                                    <div class="news-v1-heading">
+                                        <h3 class="news-v1-heading-title">{{ counselor.names }}</h3>
+                                        <span class="news-v1-element"><i class="news-v1-element-icon fa fa-circle"></i></span>
+                                        <span class="news-v1-heading-tag">{{ counselor.position }}</span>
+                                    </div>
+                                    <a class="image-popup-vertical-fit" href="assets/img/counselors/{{ counselor.image1 }}" title="Slider Image">
+                                        <img class="img-responsive" src="assets/img/counselors/{{ counselor.image1 }}" alt="">
+                                    </a>
+                                </article>
+                                <!-- End News v1 -->
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- End Masonry Grid -->
+                    </div>
                 </div>
             </div>
         </section>

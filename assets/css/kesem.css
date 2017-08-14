@@ -320,6 +320,10 @@ section {
     z-index: 1;
 }
 
+#counselors {
+    padding-bottom: 25px;
+}
+
 .test:before {
     background: url('../img/rolling-mountains.png') repeat-x 0 0;
     background-size: 1920px 368px;
