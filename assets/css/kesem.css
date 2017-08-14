@@ -321,15 +321,15 @@ section {
 }
 
 .test:before {
-    background: url('../img/sunset1.png') repeat-x 0 0;
-    background-size: 134px 50px;
+    background: url('../img/rolling-mountains.png') repeat-x 0 0;
+    background-size: 1920px 368px;
     content: "";
-    height: 50px;
+    height: 368px;
     left: 0;
     margin-bottom: -50px;
     position: absolute;
     right: 0;
-    top: -50px;
+    top: -368px;
     z-index: 2;
 }
 
@@ -382,7 +382,9 @@ section {
 }
 
 .bg-color-starry-night {
-    background: url('../img/starry-night.jpg') repeat 0 0;
+    background: url('../img/starry-night.jpg');
+    background-repeat: repeat-y;
+    padding-bottom: 368px;
 }
 
 
