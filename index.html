@@ -105,7 +105,6 @@
                         <li class="nav-item"><a class="nav-item-child" href="#staff">Our Staff</a></li>
                         <li class="nav-item"><a class="nav-item-child" href="#empowerment">Empowerment</a></li>
                         <li class="nav-item"><a class="nav-item-child" href="#blog">Donate</a></li>
-                        <li class="nav-item"><a class="nav-item-child" href="#contact">Contact</a></li>
                     </ul>
 
                     <p class="header-section-scroll-copyright">&#169; 2017 Camp Kesem at the Claremont Colleges.</p>
@@ -836,12 +835,12 @@
                                 <img class="img-responsive" src="/assets/img/camp/panda-and-crew.jpg">
                             </div>
                         </div>
-                        <!-- End Interactive Banner v2 -->
+                        <!-- End Panda Counselor Article -->
                     </div>
                     <div id="counselors" class="white-boxed content-md container">
                         <!-- Heading v1 -->
                         <div class="heading-v1 text-center margin-b-80">
-                            <h2 class="heading-v1-title">Counselors, Admin, and Pro Staff!</h2>
+                            <h2 class="heading-v1-title">Counselors, Admin, and CITs!</h2>
                             <p class="heading-v1-text">Meet everyone who volunteered their week at camp!</p>
                         </div>
                         <!-- End Heading v1 -->
@@ -890,6 +889,24 @@
                             {% endfor %}
                         </div>
                         <!-- End Masonry Grid -->
+                        <div id="" class="margin-bottom-30">
+                            <!-- Wrapper for slides -->
+                            <div class="col-md-5 sm-margin-b-30">
+                                <!-- Heading v1 -->
+                                <div class="heading-v1 margin-b-15">
+                                    <h2 class="heading-v1-title">A Letter to the CITs</h2>
+                                    <p class="heading-v1-subtitle">By Beemo</p>
+                                </div>
+                                <!-- End Heading v1 -->
+                                <p>My experience with the CIT&rsquo;s this year was one of the most memorable camp experience I have ever had. I was able to see these kids grow just being campers to almost full counselors. I was in shock by the amount of work that these kids were putting in!</p>
+                                <a id="cit-counselors-modal-button" href="#cit-counselors-modal"><button class="fun-btn fun-btn2">Read More</button></a>
+                            
+                            </div>
+                            <!--// end row -->
+                            <div class="col-md-7 padding-top-20">
+                                <img class="img-responsive" src="/assets/img/camp/cit-activity2.jpg">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -971,7 +988,7 @@
         <!-- MODALS -->
         {% for modal in site.data.articles %}
         <div id="{{ modal.id }}-modal" class="section-modal article-modal {{ modal.id }}-modal">
-            <div class="row margin-b-30">
+            <div class="row row-right-adjust margin-b-30">
                 <div class="col-sm-10 col-sm-offset-1 article-actions">
                     <span id="btn-close-modal" class="close-{{ modal.id }}-modal"> 
                         <button class="fun-btn fun-btn2 btn-base-xs">Return To Page</button>
@@ -979,17 +996,17 @@
                     <span class="float-right"><img class="article-logo" src="assets/img/campkesemclaremont.jpg"></span>
                 </div>
             </div>
-            <div class="modal-row extra-letter-margin">
-                <div class="text-center margin-top-75">
-                    <h2 class="">{{ modal.title }}</h2>
-                    <p><span class="fa fa-pencil"></span> {{ modal.author }}</p>
-                    <div class="share-me" id="share-{{ modal.id }}"></div>
+            <div class="row row-right-adjust">
+                <div class="modal-row extra-letter-margin">
+                    <div class="text-center margin-top-75">
+                        <h2 class="">{{ modal.title }}</h2>
+                        <p><span class="fa fa-pencil"></span> {{ modal.author }}</p>
+                        <div class="share-me" id="share-{{ modal.id }}"></div>
+                    </div>
+                    <div class="col-sm-12 col-md-8 col-md-offset-2 mobile-margin-b margin-b-100">
+                        {% include {{modal.id}}.html %}
+                    </div>                    
                 </div>
-                <div class="col-sm-12 col-md-8 col-md-offset-2 mobile-margin-b margin-b-100">
-                    {% include {{modal.id}}.html %}
-                </div>
-
-                
             </div>
         </div>
         {% endfor %}
@@ -1005,8 +1022,8 @@
                             <p class="footer-v7-text">Our Alumni, Marketing, and PR Coordinators send out newsletters throughout the school year! Subscribe to stay up to date with our Chapter!</p>
                             <br/>
                             <!-- Input Group -->
-                            <form action="#" method="post" class="subscribe-form input-group footer-v7-form-group">
-                                <input type="text" class="form-control footer-v7-form radius-3" name="email" placeholder="Your e-mail">
+                            <form action="//campkesem.us14.list-manage.com/subscribe/post?u=226bc49dcedaa49cc2cf04b1c&id=e66818a5b9" target="_blank" method="post" class="subscribe-form input-group footer-v7-form-group">
+                                <input type="text" class="form-control footer-v7-form radius-3" name="EMAIL" placeholder="Your e-mail" required>
                                 <span class="input-group-btn padding-lr-10">
                                     <button class="fun-btn fun-btn2 top-10" type="submit">Subscribe!</button>
                                 </span>
@@ -1016,7 +1033,7 @@
                         <div class="col-sm-5 margin-t-50 text-right">
                             <a href="javascript:void(0);" class="js-back-to-top back-to-top-theme"></a>
                             <p class="footer-v7-info-text">A child's friend through and beyond a parent's cancer.&reg;</p>
-                            <p class="footer-v7-text">&#169; 2017 Cookie Monster.</p>
+                            <p class="footer-v7-text">&#169; 2017 Cookie Monster & Jellybean.</p>
                         </div>
                     </div>
                     <!--// end row -->

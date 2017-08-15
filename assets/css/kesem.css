@@ -452,3 +452,8 @@ section {
 .margin-top-50 {
     margin-top: 50px;
 }
+
+/* Needed to remove extra overflow-x on modals */
+.row-right-adjust {
+    margin-right: 0;
+}
