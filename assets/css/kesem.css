@@ -207,6 +207,41 @@
     top: 2px;
 }
 
+.fun-btn-blue:hover {
+    box-shadow: 0 4px #004d83;
+    top: 2px;
+}
+
+.fun-btn-blue {
+    background: #0091ba;
+    color: #fff;
+    box-shadow: 0 6px #004d83;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 40px;
+}
+
+.fun-btn-yellow:hover {
+    box-shadow: 0 4px #FFDB00;
+    top: 2px;
+}
+
+.fun-btn-yellow {
+    background: #ffc600;
+    color: #fff;
+    box-shadow: 0 6px #FFDB00;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 40px;
+}
+
+.fun-back-to-top, .fun-back-to-top:hover {
+    color: #fff;
+    padding: 15px 20px;
+}
+
 .top-10 {
     top: -10px;
 }
