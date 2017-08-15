@@ -331,6 +331,10 @@ section {
     padding-bottom: 25px;
 }
 
+#quote-load {
+    margin-top: 15px;
+}
+
 .test:before {
     background: url('../img/rolling-mountains.png') repeat-x 0 0;
     background-size: 1920px 368px;
