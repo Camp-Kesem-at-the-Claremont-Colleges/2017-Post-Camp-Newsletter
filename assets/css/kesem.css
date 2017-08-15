@@ -207,6 +207,13 @@
     top: 2px;
 }
 
+.top-10 {
+    top: -10px;
+}
+.top-10:hover {
+    top: -8px;
+}
+
 video {
     border-radius: 100%;
 }
