@@ -389,10 +389,10 @@ section {
 
 .bg-color-blue-sky {
     background: #335B96;
-    background: -webkit-linear-gradient(#7ec0ee, #335B96 85%, #fd5e53);
-    background: -moz-linear-gradient(#7ec0ee, #335B96 85%, #fd5e53);
-    background: -o-linear-gradient(#7ec0ee, #335B96 85%, #fd5e53);
-    background: linear-gradient(#7ec0ee, #335B96 85%, #fd5e53); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax */
+    background: -webkit-linear-gradient(#7ec0ee, #335B96 93%, #fd5e53);
+    background: -moz-linear-gradient(#7ec0ee, #335B96 93%, #fd5e53);
+    background: -o-linear-gradient(#7ec0ee, #335B96 93%, #fd5e53);
+    background: linear-gradient(#7ec0ee, #335B96 93%, #fd5e53); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax */
     padding-bottom: 432px;
 }
 
