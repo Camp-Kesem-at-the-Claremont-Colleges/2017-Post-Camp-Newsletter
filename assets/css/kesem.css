@@ -344,7 +344,7 @@ section {
     background: -moz-linear-gradient(#573b0c, #000);
     background: -o-linear-gradient(#573b0c, #000);
     background: linear-gradient(#573b0c, #000); /* For Safari 5.1 to 6.0 */ /* For Opera 11.1 to 12.0 */ /* For Firefox 3.6 to 15 */ /* Standard syntax */
-    height: 300px;
+    height: 150px;
 }
 
 #empowerment:after {
@@ -503,6 +503,10 @@ section {
 
 .font-50px {
     font-size: 50px;
+}
+
+.font-22 {
+    font-size: 22px;
 }
 
 .promo-block-v4 h1.font-75px {

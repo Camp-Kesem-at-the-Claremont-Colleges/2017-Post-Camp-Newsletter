@@ -674,60 +674,20 @@
                             <p class="heading-v1-text">Here were some of the activities each day that campers loved!</p>
                         </div>
                         <ul class="timeline-v4">
-                            <li class="timeline-v4-list-item">
+                            {% for item in site.data.timeline %}
+                            {% assign count = item.count | modulo:2 %}
+                            <li class="timeline-v4-list-item {% if count == 1 %}timeline-v4-right-wing{% endif %}">
                                 <i class="timeline-v4-badge-icon radius-circle"></i>
                                 <div class="timeline-v4-panel timeline-v4-panel-left text-right">
-                                    <img class="img-responsive margin-b-20" src="assets/img/camp/superchef2.jpg" alt="">
-                                    <span class="timeline-v4-subtitle">Sunday</span>
-                                    <h3 class="timeline-v4-title"><a class="timeline-v4-title-link" href="">First Day of Camp! Super Chef</a></h3>
-                                    <p>Campers arrived at Camp Eaton around 2pm on Sunday and unpacked their belongings in the cabin. At night time, we had an activity called Super Chef where campers made funny and weird food for counselors.</p>
+                                    <a class="image-popup-vertical-fit" href="assets/img/camp/{{ item.photo }}" title="">
+                                        <img class="img-responsive margin-b-20" src="assets/img/camp/{{ item.photo }}" alt="">
+                                    </a>
+                                    <span class="timeline-v4-subtitle">{{ item.day }}</span>
+                                    <h3 class="timeline-v4-title">{{ item.title }}</h3>
+                                    <p>{{ item.description }}</p>
                                 </div>
                             </li>
-                            <li class="timeline-v4-list-item timeline-v4-right-wing">
-                                <i class="timeline-v4-badge-icon radius-circle"></i>
-                                <div class="timeline-v4-panel timeline-v4-panel-right">
-                                    <img class="img-responsive margin-b-20" src="assets/img/camp/pool.jpg" alt="">
-                                    <span class="timeline-v4-subtitle">Monday</span>
-                                    <h3 class="timeline-v4-title"><a class="timeline-v4-title-link" href="">Pool Time!</a></h3>
-                                    <p>A highlight for many campers was the olympic sized swimming pool on Monday! The water was a little chilly, but that didn't stop campers from having a blast.</p>
-                                </div>
-                            </li>
-                            <li class="timeline-v4-list-item">
-                                <i class="timeline-v4-badge-icon radius-circle"></i>
-                                <div class="timeline-v4-panel timeline-v4-panel-left text-right">
-                                    <img class="img-responsive margin-b-20" src="assets/img/camp/zipline1.jpg" alt="">
-                                    <span class="timeline-v4-subtitle">Tuesday</span>
-                                    <h3 class="timeline-v4-title"><a class="timeline-v4-title-link" href="">Zipline</a></h3>
-                                    <p>On Tuesday, the older campers had a chance to try the camp's zipline!</p>
-                                </div>
-                            </li>
-                            <li class="timeline-v4-list-item timeline-v4-right-wing">
-                                <i class="timeline-v4-badge-icon radius-circle"></i>
-                                <div class="timeline-v4-panel timeline-v4-panel-right">
-                                    <img class="img-responsive margin-b-20" src="assets/img/camp/water_wars1.jpg" alt="">
-                                    <span class="timeline-v4-subtitle">Wednesday</span>
-                                    <h3 class="timeline-v4-title"><a class="timeline-v4-title-link" href="">Water Wars</a></h3>
-                                    <p>On Wednesday, the campers split into 3 separate teams for a water infused frenzy of games! Activites included a water relay and capture the wet sponge!</p>
-                                </div>
-                            </li>
-                            <li class="timeline-v4-list-item">
-                                <i class="timeline-v4-badge-icon radius-circle"></i>
-                                <div class="timeline-v4-panel timeline-v4-panel-left text-right">
-                                    <img class="img-responsive margin-b-20" src="assets/img/camp/color_wars2.jpg" alt="">
-                                    <span class="timeline-v4-subtitle">Thursday</span>
-                                    <h3 class="timeline-v4-title"><a class="timeline-v4-title-link" href="">Messy Wars</a></h3>
-                                    <p>One of the best parts about camp is a day of messy events—Messy Wars! The campers and counselors alike love Messy Wars, even though nobody likes cleaning up. Messy Wars is a great way for everyone to let loose and let their artistic side out. We were able to play paint tag, throw colored Holi powder and sundae our camp admin team! Some of the campers ended up getting much more messy than our counselors and staff but we all hosed them down before continuing with the rest of our day.</p>
-                                </div>
-                            </li>
-                            <li class="timeline-v4-list-item timeline-v4-right-wing">
-                                <i class="timeline-v4-badge-icon radius-circle"></i>
-                                <div class="timeline-v4-panel timeline-v4-panel-right">
-                                    <img class="img-responsive margin-b-20" src="assets/img/camp/web1.jpg" alt="">
-                                    <span class="timeline-v4-subtitle">Friday</span>
-                                    <h3 class="timeline-v4-title"><a class="timeline-v4-title-link" href="">Closing Circle</a></h3>
-                                    <p>Before we said good-bye we had a final camp activity called the Web of Kindness!</p>
-                                </div>
-                            </li>
+                            {% endfor %}
                             <li class="clearfix" style="float: none;"></li>
                         </ul>
                     </div>
@@ -742,136 +702,40 @@
                     <div class="theme-portfolio">
                         <!-- Portfolio 3 Columns Grid -->
                         <div id="portfolio-3-col-grid" class="cbp">
-                            <!-- Cbp Item -->
+                            {% for cabin in site.data.cabins %}
                             <div class="cbp-item graphic web-design theme-portfolio-item-v2">
                                 <div class="cbp-caption">
-                                    <div class="cbp-caption-defaultWrap theme-portfolio-active-wrap">
-                                        <img src="assets/img/camp/ikea.jpg" alt="">
-                                        <div class="theme-icons-wrap theme-portfolio-lightbox">
-                                            <a class="cbp-lightbox" href="assets/img/camp/ikea.jpg" data-title="Portfolio">
-                                                <i class="theme-icons theme-icons-white-bg theme-icons-md radius-3 icon-focus"></i>
-                                            </a>
+                                    <div class="team-v2 wow">
+                                            <div class="team-v2-img-gradient">
+                                                <img class="img-responsive coordinator-img" src="assets/img/camp/{{ cabin.photo }}" alt="">
+                                            </div>
+                                            <div class="team-v2-content">
+                                                <div class="team-v2-center-align">
+                                                    <a class="cbp-lightbox" href="assets/img/camp/{{ cabin.photo }}" data-title="{{ cabin.cabin }} - {{ cabin.motto }}">
+                                                        <h4 class="team-v2-member">Motto:</h4>
+                                                        <span class="team-v2-member-position">"{{ cabin.motto }}"</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- <a class="team-v2-link" href="assets/img/camp/jokers-power-rangers.jpg"></a> -->
                                         </div>
-                                    </div>
                                 </div>
                                 <div class="theme-portfolio-title-heading">
-                                    <h4 class="theme-portfolio-title"><a href="portfolio_single_item.html">Ikea</a></h4>
-                                    <span class="theme-portfolio-subtitle">Boys 10-17</span>
+                                    <h4 class="theme-portfolio-title">{{ cabin.cabin }}</h4>
+                                    <span class="theme-portfolio-subtitle">{{ cabin.age }}</span>
                                 </div>
                             </div>
-                            <!-- End Cbp Item -->
-
-                            <!-- Cbp Item -->
-                            <div class="cbp-item idea graphic theme-portfolio-item-v2">
-                                <div class="cbp-caption">
-                                    <div class="cbp-caption-defaultWrap theme-portfolio-active-wrap">
-                                        <img src="assets/img/camp/mi6.jpg" alt="">
-                                        <div class="theme-icons-wrap theme-portfolio-lightbox">
-                                            <a class="cbp-lightbox" href="assets/img/camp/mi6.jpg" data-title="Portfolio">
-                                                <i class="theme-icons theme-icons-white-bg theme-icons-md radius-3 icon-focus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-portfolio-title-heading">
-                                    <h4 class="theme-portfolio-title"><a href="portfolio_single_item.html">MI6</a></h4>
-                                    <span class="theme-portfolio-subtitle">Girls 14-17</span>
-                                </div>
-                            </div>
-                            <!-- End Cbp Item -->
-
-                            <!-- Cbp Item -->
-                            <div class="cbp-item idea graphic theme-portfolio-item-v2">
-                                <div class="cbp-caption">
-                                    <div class="cbp-caption-defaultWrap theme-portfolio-active-wrap">
-                                        <img src="assets/img/camp/mystery-box.jpg" alt="">
-                                        <div class="theme-icons-wrap theme-portfolio-lightbox">
-                                            <a class="cbp-lightbox" href="assets/img/camp/mystery-box.jpg" data-title="Portfolio">
-                                                <i class="theme-icons theme-icons-white-bg theme-icons-md radius-3 icon-focus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-portfolio-title-heading">
-                                    <h4 class="theme-portfolio-title">The Mystery Box</h4>
-                                    <span class="theme-portfolio-subtitle">Girls 10-12</span>
-                                </div>
-                            </div>
-                            <!-- End Cbp Item -->
-
-                            <!-- Cbp Item -->
-                            <div class="cbp-item idea graphic theme-portfolio-item-v2">
-                                <div class="cbp-caption">
-                                    <div class="cbp-caption-defaultWrap theme-portfolio-active-wrap">
-                                        <img src="assets/img/camp/hot-penguins.jpg" alt="">
-                                        <div class="theme-icons-wrap theme-portfolio-lightbox">
-                                            <a class="cbp-lightbox" href="assets/img/camp/hot-penguins.jpg" data-title="Portfolio">
-                                                <i class="theme-icons theme-icons-white-bg theme-icons-md radius-3 icon-focus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-portfolio-title-heading">
-                                    <h4 class="theme-portfolio-title">Hot Penguins</h4>
-                                    <span class="theme-portfolio-subtitle">Girls 6-9</span>
-                                </div>
-                            </div>
-                            <!-- End Cbp Item -->
-
-                            <!-- Cbp Item -->
-                            <div class="cbp-item idea graphic theme-portfolio-item-v2">
-                                <div class="cbp-caption">
-                                    <div class="cbp-caption-defaultWrap theme-portfolio-active-wrap">
-                                        <img src="assets/img/camp/jokers-power-rangers.jpg" alt="">
-                                        <div class="theme-icons-wrap theme-portfolio-lightbox">
-                                            <a class="cbp-lightbox" href="assets/img/camp/jokers-power-rangers.jpg" data-title="Portfolio">
-                                                <i class="theme-icons theme-icons-white-bg theme-icons-md radius-3 icon-focus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-portfolio-title-heading">
-                                    <h4 class="theme-portfolio-title"><a href="portfolio_single_item.html">Jokers + Power Rangers</a></h4>
-                                    <span class="theme-portfolio-subtitle">Boys 6-9</span>
-                                </div>
-                            </div>
-                            <!-- End Cbp Item -->
-
-                            <!-- Cbp Item -->
-                            <div class="cbp-item idea graphic theme-portfolio-item-v2">
-                                <div class="cbp-caption">
-                                    <div class="cbp-caption-defaultWrap theme-portfolio-active-wrap">
-                                        <img src="assets/img/camp/admin-cabin.jpg" alt="">
-                                        <div class="theme-icons-wrap theme-portfolio-lightbox">
-                                            <a class="cbp-lightbox" href="assets/img/camp/admin-cabin.jpg" data-title="Portfolio">
-                                                <i class="theme-icons theme-icons-white-bg theme-icons-md radius-3 icon-focus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="theme-portfolio-title-heading">
-                                    <h4 class="theme-portfolio-title"><a href="portfolio_single_item.html">Admin</a></h4>
-                                    <span class="theme-portfolio-subtitle">18+</span>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <!-- End Portfolio 3 Columns Grid -->
                     </div>
                     <!-- End Theme Portfolio -->
 
-                    <div id="staff" class="white-boxed content-md container margin-top-50">
-                        <!-- Heading v1 -->
-                        <div class="heading-v1 text-center margin-b-80">
-                            <h2 class="heading-v1-title">Meet the Team!</h2>
-                            <p class="heading-v1-text">We had 13 counselors, 5 admin, 3 professional staff, and 1 photographer! Meet them all and read about some of their experiences!</p>
-                        </div>
-                        <!-- End Heading v1 -->
-                    </div>
-                    <div id="counselors" class="white-boxed content-md container">
+                    <div id="staff" class="white-boxed content-md container margin-t-40 ">
                         <!-- Heading v1 -->
                         <div class="heading-v1 text-center margin-b-20">
-                            <h2 class="heading-v1-title">Counselors, Admin, and CITs!</h2>
-                            <p class="heading-v1-text">Meet everyone who volunteered their week at camp!</p>
+                            <h2 class="heading-v1-title">Meet the Team!</h2>
+                            <p class="heading-v1-text">We had 13 counselors, and 5 admin! Meet them all and read about some of their experiences!</p>
                         </div>
                         <!-- End Heading v1 -->
 
@@ -895,9 +759,9 @@
                             {% endfor %}
                         </div>
 
-                        <div class="heading-v1 text-center margin-b-80">
+                        <div class="heading-v1 text-center margin-b-20">
                             <h2 class="heading-v1-title">Pro Staff!</h2>
-                            <p class="heading-v1-text">These persons were just as involved and interactive with the campers! Camp couldn't have happened without them!</p>
+                            <p class="heading-v1-text">We had 1 camp advisor, 1 regional director, 1 photographer, and 3 professional staff! Camp couldn't have happened without them!</p>
                         </div>
 
                         <div class="masonry-grid margin-b-40">
@@ -919,7 +783,11 @@
                             {% endfor %}
                         </div>
                         <!-- End Masonry Grid -->
-                        <div id="" class="row margin-bottom-30">
+                        <div class="heading-v1 text-center margin-b-40">
+                            <h2 class="heading-v1-title">Camp From A Counselor's View!</h2>
+                            <p class="heading-v1-text">Read about how Camp Kesem at the Claremont Colleges impacted the lives of our counselors!</p>
+                        </div>
+                        <div id="" class="row margin-b-60">
                             <!-- Wrapper for slides -->
                             <div class="col-md-5 col-md-push-7 sm-margin-b-30">
                                 <!-- Heading v1 -->
@@ -938,7 +806,7 @@
                             </div>
                         </div>
                         <!-- End Panda Counselor Article -->
-                        <div id="" class="row margin-b-50">
+                        <div id="" class="row margin-b-60">
                             <!-- Wrapper for slides -->
                             <div class="col-md-5 sm-margin-b-30">
                                 <!-- Heading v1 -->
@@ -1141,6 +1009,18 @@
 <script type="text/javascript" src="assets/scripts/components/jssocials.min.js"></script>
 <script type="text/javascript" src="assets/scripts/app.js"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
+<!-- GOOGLE ANALYTICS  -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-104738540-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- END GOOGLE ANALYTICS -->
 <!--========== END JAVASCRIPTS ==========-->
 
 </body>
