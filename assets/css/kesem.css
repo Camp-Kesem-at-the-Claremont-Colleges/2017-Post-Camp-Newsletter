@@ -492,6 +492,14 @@ section {
 .row-right-adjust {
     margin-right: 0;
 }
+.row-left-adjust {
+    margin-left: 0;
+}
+
+.row-both-adjust {
+    margin-left: 0;
+    margin-right: 0;
+}
 
 .font-50px {
     font-size: 50px;
@@ -499,4 +507,10 @@ section {
 
 .promo-block-v4 h1.font-75px {
     font-size: 75px;
+}
+
+@media (max-width: 480px) {
+    .col-xss-no-offset {
+        margin-left: 0;
+    }
 }
