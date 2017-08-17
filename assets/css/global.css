@@ -31487,7 +31487,7 @@ fieldset[disabled] .btn-ig-bg {
   display: block;
   float: none;
   text-align: center;
-  margin: 40px 25px;
+  margin: 0px 25px 40px 25px;
 }
 
 .header-section-scroll .navbar-logo .navbar-logo-wrap {
