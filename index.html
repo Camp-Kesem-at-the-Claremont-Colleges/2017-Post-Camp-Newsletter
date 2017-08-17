@@ -36,7 +36,7 @@
 <link href="assets/css/animate.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/iconate.css" rel="stylesheet">
 <link href="assets/css/jssocials.css" rel="stylesheet">
-<link href="assets/css/jssocials-theme-minima.css" rel="stylesheet">
+<link href="assets/css/jssocials-theme-flat.css" rel="stylesheet">
 
 <!-- BEGIN THEME PLUGINS STYLE -->
 <link href="assets/plugins/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css"/>
@@ -590,11 +590,16 @@
                                 <img class="img-responsive" src="/assets/img/camp/cit-activity2.jpg">
                             </div>
                         </div>
+                        <div id="" class="row margin-b-60 text-center">
+                            <h2 class="heading-v1-title font-50px">Camp Songs!</h2>
+                            <p>The Claremont chapter handpicks their favorite camp songs to sing at camp!</p>
+                            <a id="camp-songs-modal-button" href="#camp-songs-modal"><button class="fun-btn fun-btn-yellow">Check Out Our Camp Songs <i class="fa fa-music padding-l-5"></i></button></a>
+                        </div>
                         <div class="row heading-v1 text-center margin-b-80">
                             <h2 class="heading-v1-title">Volunteer for Next Year's Camp!</h2>
                             <p class="heading-v1-text">We're on the lookout for counselors and professional staff to join us in 2018!</p>
                             <a target="_blank" href="https://goo.gl/forms/4QFGlM0bUlyJ8wBe2"><button class="fun-btn fun-btn-blue">Apply to Be a Counselor</button></a>
-                            <a href="mailto:claremont@campkesem.org"><button class="fun-btn fun-btn-yellow">Apply for Pro Staff <i class="fa fa-envelope padding-l-5"></i></button></a>
+                            <a href="mailto:claremont@campkesem.org"><button class="fun-btn fun-btn-kesem-green">Apply for Pro Staff <i class="fa fa-envelope padding-l-5"></i></button></a>
                         </div>
                     </div>
                 </div>
@@ -677,8 +682,10 @@
             <div class="row row-both-adjust">
                 <div class="modal-row extra-letter-margin">
                     <div class="text-center margin-top-75">
-                        <h2 class="">{{ modal.title }}</h2>
+                        <h2 class="font-50px">{{ modal.title }}</h2>
+                        {% if modal.author %}
                         <p><span class="fa fa-pencil"></span> {{ modal.author }}</p>
+                        {% endif %}
                         <div class="share-me" id="share-{{ modal.id }}"></div>
                     </div>
                     <div class="col-sm-12 col-md-8 col-md-offset-2 mobile-margin-b margin-b-100 article-format">

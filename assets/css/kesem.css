@@ -261,6 +261,21 @@ body {
     border-radius: 40px;
 }
 
+.fun-btn-kesem-green:hover {
+    box-shadow: 0 4px #008D65;
+    top: 2px;
+}
+
+.fun-btn-kesem-green {
+    background: #00C08A;
+    color: #fff;
+    box-shadow: 0 6px #008D65;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 40px;
+}
+
 .fun-back-to-top, .fun-back-to-top:hover {
     color: #fff;
     padding: 15px 20px;
