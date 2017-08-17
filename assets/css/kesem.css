@@ -599,3 +599,22 @@ h3.empower {
     opacity: .75;
     width: 250px;
 }
+
+.nav-involved {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    border-top: 1px dashed #ebeef6;
+    color: #34343c;
+    letter-spacing: 1px;
+}
+
+.nav-involved a {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #34343c;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+}
