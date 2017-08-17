@@ -382,6 +382,10 @@ section {
     z-index: 1;
 }
 
+#song {
+    margin: 40px 0;
+}
+
 #counselors {
     padding-bottom: 25px;
 }

@@ -540,7 +540,7 @@
                                         <span class="news-v1-element"><i class="news-v1-element-icon fa fa-circle"></i></span>
                                         <span class="news-v1-heading-tag">{{ staff.position }}</span>
                                     </div>
-                                    <a class="image-popup-vertical-fit" href="assets/img/staff/{{ staff.image1 }}" title="{{ staff.names }}">
+                                    <a class="image-popup-vertical-fit" href="assets/img/staff/{{ staff.image1 }}" title="{{ staff.names }}{% if staff.quote %} - {{  staff.quote }}{% endif %}">
                                         <img class="img-responsive" src="assets/img/staff/{{ staff.image1 }}" alt="">
                                     </a>
                                 </article>
@@ -693,6 +693,18 @@
         <section id="contact" class="test">
             <!-- Footer v7 -->
             <footer id="footer" class="footer-v7">
+                <div id="songs" class="row">
+                    <div class="text-center">
+                        <p class="white-heading-v1">I love the mountains,</p>
+                        <p class="white-heading-v1">I love the rolling hills,</p>
+                        <p class="white-heading-v1">I love the flowers,</p>
+                        <p class="white-heading-v1">I love the daffodils,</p>
+                        <p class="white-heading-v1">I love the Campfire,</p>
+                        <p class="white-heading-v1">when all the lights are low</p>
+                        <p class="white-heading-v1">Boom-de-ada, boom-de-ada,</p>
+                        <p class="white-heading-v1">Boom-de-ada, boom-de-ada . . .</p>
+                    </div>
+                </div>
                 <div class="content-md container-sm">
                     <div class="row">
                         <div class="col-sm-7 sm-margin-b-30">
