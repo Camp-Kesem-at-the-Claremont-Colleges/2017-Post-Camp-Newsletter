@@ -21,7 +21,7 @@ var loadQuote = $('<h2 id="quote-load">"' + quotes[randomQ] + '"</h2><h2>' + aut
 $('#quote').append(loadQuote);
 
 // preloading
-$(document).ready(function() {
+$(window).load(function() {
  
     setTimeout(function(){
         $('body').addClass('loaded');
