@@ -518,3 +518,11 @@ section {
         margin-left: 0;
     }
 }
+
+.clickable {
+    cursor: pointer;
+}
+
+.font-25 {
+    font-size: 25px;
+}
