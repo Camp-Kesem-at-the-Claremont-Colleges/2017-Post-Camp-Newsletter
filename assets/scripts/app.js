@@ -48,6 +48,83 @@ $("#share-{{ modal.id }}").jsSocials({
 });
 {% endfor %}
 
+// Process animation
+var countOptions = {
+useEasing : true, 
+useGrouping : true, 
+separator : ',', 
+decimal : '.', 
+prefix : '', 
+suffix : '' 
+};
+// financials doughnut
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+}
+var labels = [];
+var financials = [];
+var bgColor = [];
+var bgHover = [];
+var counters = [];
+{% assign count = 0 %}
+{% for fund in site.data.financials %}
+    labels[{{ count }}] = "{{ fund.label }} ";
+    financials[{{ count }}] = {{ fund.data }};
+    bgColor[{{ count }}] = "{{ fund.color }}";
+    bgHover[{{ count }}] = "{{ fund.hover }}";
+    {% assign count = count | plus:1 %}
+{% endfor %}
+var data = {
+    labels: labels,
+    datasets:[
+        {
+            data: financials,
+            backgroundColor: bgColor,
+            hoverBackgroundColor: bgHover,
+        }]
+};
+function makeFinChart() {
+    var ctx = document.getElementById('financials').getContext('2d');
+    var myDoughnutChart = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: {
+            tooltipFontSize: 20,
+            tooltips: 
+            {
+              callbacks: {
+                  label: function(tooltipItem, data, totalD) {
+                      var label = data.labels[tooltipItem.index];
+                      var value = data.datasets[0].data[tooltipItem.index];
+                      var totalD = 0;
+                      $.each(financials,function() {
+                          totalD += this;
+                      });
+                      var percentage = Math.round(value / totalD * 100);
+                      return label + ' - ' + percentage + '%';
+                  }
+              }
+          },
+        }
+    });
+}
+var inView = false;
+$(window).scroll(function () {
+    if (isScrolledIntoView('#fundraising')) {
+        if (inView) {
+            return;
+        }
+        inView = true;
+        makeFinChart();
+    }
+});
+
 // Core Javascript Initialization
 var App = function() {
     'use strict';

@@ -163,7 +163,7 @@
                         <div id="blog-grid-2-col" class="carousel slide carousel-fade" data-ride="carousel">
                             <!-- Wrapper for slides -->
                             <div class="">
-                                <div class="" style="width: 100%; height: 450px">
+                                <div class="">
                                     <img class="img-responsive" src="assets/img/messy_wars.jpg" alt="">
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                 </div>
                 <!--// end row -->
                 <div id="fundraising" class="row margin-b-60">
-                    <div class="col-md-8 col-md-offset-2 sm-margin-b-30">
+                    <div class="col-md-6 col-md-offset-1 sm-margin-b-30 md-margin-b-30">
                         <!-- Heading v1 -->
                         <div class="heading-v1 margin-b-15">
                             <h2 class="heading-v1-title">Fundraising Report</h2>
@@ -182,6 +182,11 @@
                         <p>With the Camp Kesem at the Claremont Colleges ending its second fiscal year, we can proudly say our organization has made huge improvements with fundraising. We raised over 7x the amount we did our first year, meeting about 75% of our $30,000 goal!</p>
                         <a id="treasurer-report-modal-button" href="#treasurer-report-modal"><button class="fun-btn fun-btn2">Read More</button></a>
                     
+                    </div>
+                    <div class="col-md-5 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                        <div class="doughnut-chart">
+                            <canvas id="financials" width="400" height="400"></canvas>
+                        </div>
                     </div>
                     <!--// end row -->
                 </div>
@@ -676,7 +681,7 @@
         <!-- MODALS -->
         {% for modal in site.data.articles %}
         <div id="{{ modal.id }}-modal" class="section-modal article-modal {{ modal.id }}-modal">
-            <div class="row row-right-adjust margin-b-30">
+            <div class="row row-both-adjust margin-b-30">
                 <div class="col-sm-10 col-sm-offset-1 article-actions">
                     <span id="btn-close-modal" class="close-{{ modal.id }}-modal"> 
                         <button class="fun-btn fun-btn2 btn-base-xs">Return To Page</button>
@@ -684,7 +689,7 @@
                     <span class="float-right"><img class="article-logo" src="assets/img/campkesemclaremont.jpg"></span>
                 </div>
             </div>
-            <div class="row row-right-adjust">
+            <div class="row row-both-adjust">
                 <div class="modal-row extra-letter-margin">
                     <div class="text-center margin-top-75">
                         <h2 class="">{{ modal.title }}</h2>
@@ -772,6 +777,7 @@
 <script type="text/javascript" src="assets/plugins/iconate.js"></script>
 <script type="text/javascript" src="assets/plugins/animatedModal.js"></script>
 <script type="text/javascript" src="assets/scripts/components/jssocials.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
 <script type="text/javascript" src="assets/scripts/app.js"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- GOOGLE ANALYTICS  -->
