@@ -454,7 +454,7 @@ section {
 .bg-color-starry-night {
     background: url('../img/starry-night.jpg');
     background-repeat: repeat;
-    padding-bottom: 368px;
+    padding-bottom: 400px;
 }
 
 
@@ -561,4 +561,8 @@ h3.empower {
 
 .black-background {
     background: #000;
+}
+
+.z-2 {
+    z-index: 2;
 }
