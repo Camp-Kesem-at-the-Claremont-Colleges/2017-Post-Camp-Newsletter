@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .op-b-promo-b-v12 .op-b-promo-b-v12-community {
     display: block;
     text-align: center;
