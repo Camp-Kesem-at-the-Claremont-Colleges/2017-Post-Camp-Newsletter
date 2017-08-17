@@ -1,5 +1,5 @@
-names,position,image1,image2
-Aqua / Panda,CIT Counselor / Counselor,panda-aqua.jpg,aqua2.jpg
+names,position,image1,image2,quote
+Aqua / Panda,CIT Counselor / Counselor,panda-aqua.jpg,aqua2.jpg,,
 Beemo,CIT Counselor,beemo-candid.jpg,,
 Carebear / Lobo,Admin / Unit Leader,carebear-lobo.jpg,,
 Carrots,Counselor,carrots.jpg,,
@@ -8,7 +8,7 @@ Fundip / Braidz, CIT / CIT,fundip-braidz.jpg,,
 Jellybean,Counselor,jellybean.jpg,,
 Cyndaquil / Lobo, Counselor / Unit Leader,lobo-cyndaquil.jpg,,
 Meeko / Cupcake,Unit Leader / Counselor,meeko-cupcake.jpg,,
-Moose,Counselor,moose.jpg,,
+Moose,Counselor,moose.jpg,,"Camp Kesem nurtures and uplifts in a capacity I hadn’t yet experienced elsewhere. After spending only one week at camp, I’m confident that we built a community that I can depend on for laughs, support, and love. I’ll always cherish both the deep connections and wonderful memories I made — especially this upcoming year as I await the next week of Camp Kesem with the Claremont Colleges team!"
 Pogo,Admin,pogo.jpg,,
 Poofy,Counselor,poofy.jpg,,
 Scuba,Admin,scuba.jpg,,

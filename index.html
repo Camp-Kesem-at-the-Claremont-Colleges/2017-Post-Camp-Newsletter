@@ -516,7 +516,7 @@
                                         <span class="news-v1-element"><i class="news-v1-element-icon fa fa-circle"></i></span>
                                         <span class="news-v1-heading-tag">{{ counselor.position }}</span>
                                     </div>
-                                    <a class="image-popup-vertical-fit" href="assets/img/counselors/{{ counselor.image1 }}" title="{{ counselor.names }}">
+                                    <a class="image-popup-vertical-fit" href="assets/img/counselors/{{ counselor.image1 }}" title="{{ counselor.names }}{% if counselor.quote %} - {{  counselor.quote }}{% endif %}">
                                         <img class="img-responsive" src="assets/img/counselors/{{ counselor.image1 }}" alt="">
                                     </a>
                                 </article>
