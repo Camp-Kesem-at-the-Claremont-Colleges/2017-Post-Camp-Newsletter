@@ -1,5 +1,5 @@
 label,data,color,hover,icon,content,money
-Individual Donations,16235,#008FBE,#bff2ff,fa-suitcase,"","$34,125"
-Grants,2500,#00C08A,#bff2ff,fa-graduation-cap,"","$2,140"
-Corporate Sponsorships,1553,#A4D55D,#bff2ff,fa-heart,"","$1,680"
-College,791,#FFDB00,#bff2ff,fa-cogs,"","$1,599"
+Individual Donations,16235,#008FBE,#399DBE,fa-suitcase,"","$34,125"
+Grants,2500,#00C08A,#3AC09A,fa-graduation-cap,"","$2,140"
+Corporate Sponsorships,1553,#A4D55D,#7DA247,fa-heart,"","$1,680"
+College,791,#FFDB00,#FFDF19,fa-cogs,"","$1,599"

@@ -550,3 +550,15 @@ section {
 h3.empower {
     font-size: 32px;
 }
+
+.kesem-blue {
+    color: #008FBE;
+}
+
+.white-heading-v1 em, .white-heading-v1 strong {
+    color: #fff;
+}
+
+.black-background {
+    background: #000;
+}

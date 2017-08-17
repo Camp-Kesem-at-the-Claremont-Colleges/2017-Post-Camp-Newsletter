@@ -129,7 +129,7 @@ body {
 }
 
 p {
-  font-size: 16.5px;
+  font-size: 17.5px;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
   color: #606060;
@@ -139,7 +139,7 @@ p {
 em,
 li,
 li a {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   font-family: 'Raleway', sans-serif;
   color: #34343c;
@@ -1372,7 +1372,7 @@ h1 > a:focus, h2 > a:focus, h3 > a:focus, h4 > a:focus, h5 > a:focus, h6 > a:foc
 }
 
 .news-v1 .news-v1-heading .news-v1-heading-title {
-  font-size: 20px;
+  font-size: 24px;
   font-style: italic;
   margin-bottom: 0;
 }
