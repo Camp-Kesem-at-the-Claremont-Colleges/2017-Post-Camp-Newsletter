@@ -196,7 +196,7 @@ body {
     transition: all 0.3s;
 }
 
-.fun-btn {
+.square-btn {
     border: none;
     font-family: 'Raleway', sans-serif;
     font-size: 12px;
@@ -216,6 +216,27 @@ body {
     transition: all 0.3s;
 }
 
+.fun-btn {
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 15px 40px;
+    display: inline-block;
+    margin: 5px 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-radius: 40px;
+}
+
 .fun-btn2 {
     background: #95d60a;
     color: #fff;
@@ -223,7 +244,6 @@ body {
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
-    border-radius: 40px;
 }
 
 .fun-btn2:hover {
@@ -231,7 +251,7 @@ body {
     top: 2px;
 }
 
-.fun-btn-blue:hover {
+.fun-btn-blue:hover, .fun-btn-fb-blue:hover {
     box-shadow: 0 4px #004d83;
     top: 2px;
 }
@@ -243,7 +263,15 @@ body {
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
-    border-radius: 40px;
+}
+
+.fun-btn-fb-blue {
+    background: #3b5998;
+    color: #fff;
+    box-shadow: 0 6px #004d83;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
 }
 
 .fun-btn-yellow:hover {
@@ -258,12 +286,53 @@ body {
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
-    border-radius: 40px;
 }
 
 .fun-btn-kesem-green:hover {
     box-shadow: 0 4px #008D65;
     top: 2px;
+}
+
+.fun-btn-black:hover {
+    box-shadow: 0 4px #8a3ab9;
+    top: 2px;
+}
+
+.fun-btn-black {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 6px #8a3ab9;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+.fun-btn-maroon:hover {
+    box-shadow: 0 4px #4D0000;
+    top: 2px;
+}
+
+.fun-btn-maroon {
+    background: #800000;
+    color: #fff;
+    box-shadow: 0 6px #4D0000;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+.fun-btn-mint:hover {
+    box-shadow: 0 4px #008D65;
+    top: 2px;
+}
+
+.fun-btn-mint {
+    background: #27b9b1;
+    color: #fff;
+    box-shadow: 0 6px #008D65;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
 }
 
 .fun-btn-kesem-green {
@@ -273,7 +342,6 @@ body {
     -webkit-transition: none;
     -moz-transition: none;
     transition: none;
-    border-radius: 40px;
 }
 
 .fun-back-to-top, .fun-back-to-top:hover {
@@ -523,6 +591,10 @@ section {
     padding-bottom: 40px;
 }
 
+.padding-b-30 {
+    padding-bottom: 30px;
+}
+
 .no-top-padding {
     padding-top: 0;
 }
@@ -631,4 +703,8 @@ h3.empower {
     /* font-family: 'Just Another Hand', cursive; */
     font-family: 'Just Another Hand', cursive;
     font-size: 25px;
+}
+
+.sponsor {
+    height: 54px;
 }
