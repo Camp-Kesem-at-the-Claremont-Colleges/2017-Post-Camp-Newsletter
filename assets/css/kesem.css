@@ -519,8 +519,16 @@ section {
     padding-top: 50px;
 }
 
+.padding-b-40 {
+    padding-bottom: 40px;
+}
+
 .no-top-padding {
     padding-top: 0;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
 }
 
 .margin-top-30 {
@@ -617,4 +625,10 @@ h3.empower {
     text-transform: uppercase;
     text-decoration: none;
     padding: 10px;
+}
+
+.satisfy p {
+    /* font-family: 'Just Another Hand', cursive; */
+    font-family: 'Just Another Hand', cursive;
+    font-size: 25px;
 }
