@@ -32,6 +32,6 @@ $(document).ready(function() {
 
 $(window).load(function(){ 
     // video code 
-    $('video source').attr("src","assets/video/ck-short.mp4")
+    $('video source').attr("src","assets/video/ck-short3.mp4")
     document.querySelector("video").load()
 })
