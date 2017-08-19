@@ -21,8 +21,7 @@ var loadQuote = $('<h2 id="quote-load">"' + quotes[randomQ] + '"</h2><h2>' + aut
 $('#quote').append(loadQuote);
 
 // preloading
-let body = document.querySelector('body');
-$('body').on('touchmove', false);
+$('#loader-wrapper').on('touchmove', false);
 $(window).load(function() {
     if ($(window).width() <= 991) {
         $( window ).resize(function() {
@@ -31,7 +30,6 @@ $(window).load(function() {
     }
     setTimeout(function(){
         $('body').addClass('loaded');
-        $('body').on('touchmove', true);
     }, 6000);
 
 });
