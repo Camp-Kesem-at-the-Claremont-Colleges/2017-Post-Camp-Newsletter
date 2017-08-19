@@ -23,11 +23,7 @@ $('#quote').append(loadQuote);
 // preloading
 $('#loader-wrapper').on('touchmove', false);
 $(window).load(function() {
-    if ($(window).width() <= 991) {
-        $( window ).resize(function() {
-            document.querySelector('#loader-wrapper').style.height = $(window).height() + 60;
-        })
-    }
+    
     setTimeout(function(){
         $('body').addClass('loaded');
     }, 6000);
