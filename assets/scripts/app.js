@@ -153,6 +153,9 @@ var chart = new Chart(ctx, {
    }
 });
 
+let fullheight = document.querySelector('.fullheight')
+let header = document.querySelector('header');
+
 // show mobile scroll
 let didScroll;
 
@@ -162,21 +165,18 @@ $(window).scroll(function(event){
 
 // run hasScrolled() and reset didScroll status
 setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
+    if (didScroll && $(window).width() <= 991) {
+        hasScrolled();
+        didScroll = false;
+    }
 }, 250);
 
 let lastScrollTop = 0;
 function hasScrolled() {
     let delta = 5;
-    let header = document.querySelector('header');
     let navbarHeight = $('header').outerHeight();
 
     let st = $(this).scrollTop();
-    console.log(st)
-    console.log(lastScrollTop)
 
     if (Math.abs(lastScrollTop - st) <= delta) {
         return;
@@ -184,17 +184,12 @@ function hasScrolled() {
 
     // If current position > last position AND scrolled past navbar...
     if (st > lastScrollTop && st > navbarHeight){
-        console.log('hello1')
         // Scroll Down
-        console.log(navbarHeight)
-        console.log(`-${navbarHeight}px`);
         header.style.top = `-${navbarHeight}px`;
     } else {
-        console.log('hello2')
         // Scroll Up
         // If did not scroll past the document (possible on mac)...
         if(st + $(window).height() < $(document).height()) { 
-            console.log('hello3')
             header.style.top = `0px`;
             $('.toggle-icon').removeClass('is-clicked');
         }
@@ -418,23 +413,35 @@ var App = function() {
 
         $('.fullheight').css('height', WindowHeight - HeaderHeight);
 
-        $(window).resize(function() {
-            var WindowHeight = $(window).height();
-            $('.fullheight').css('height', WindowHeight - HeaderHeight);
-        });
+        // $(window).resize(function() {
+        //     var WindowHeight = $(window).height();
+        //     $('.fullheight').css('height', WindowHeight - HeaderHeight);
+        // });
     }
 
     // Vertical Center Aligned
     // Note! This works only with promo block and background image via CSS.
     var handleVerticalCenterAligned = function() {
-        $('.vertical-center-aligned').each(function() {
-            $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 2);
-        });
-        $(window).resize(function() {
+        if ($(window).width() <= 991) {
+            $('.vertical-center-aligned').each(function() {
+                $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 3);
+            });
+            $(window).resize(function() {
+                $('.vertical-center-aligned').each(function() {
+                    $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 3);
+                });
+            });
+        }
+        else {
             $('.vertical-center-aligned').each(function() {
                 $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 2);
             });
-        });
+            $(window).resize(function() {
+                $('.vertical-center-aligned').each(function() {
+                    $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 2);
+                });
+            });
+        }
     }
 
     // Handle Toggle Collapse Box
