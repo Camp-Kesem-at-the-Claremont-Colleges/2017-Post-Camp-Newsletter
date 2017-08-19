@@ -733,3 +733,15 @@ h3.empower {
     text-decoration: none;
     color: #FDFDFD;
 }
+
+@media(max-width: 767px) {
+    .stack-bar-div {
+        height: 500px;
+    }
+}
+
+@media(min-width: 768px) {
+    .stack-bar-div {
+        height: 600px;
+    }
+}

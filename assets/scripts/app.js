@@ -140,6 +140,8 @@ var chart = new Chart(ctx, {
       },]
    },
    options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
          xAxes: [{
             stacked: true // this should be set to make the bars stacked
