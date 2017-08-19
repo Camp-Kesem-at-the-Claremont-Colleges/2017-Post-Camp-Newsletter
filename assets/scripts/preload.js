@@ -22,10 +22,16 @@ $('#quote').append(loadQuote);
 
 // preloading
 $('#loader-wrapper').on('touchmove', false);
-$(window).load(function() {
-    
+$(document).ready(function() {
+
     setTimeout(function(){
         $('body').addClass('loaded');
     }, 6000);
 
 });
+
+$(window).load(function(){ 
+    // video code 
+    $('video source').attr("src","assets/video/ck-short.mp4")
+    document.querySelector("video").load()
+})
