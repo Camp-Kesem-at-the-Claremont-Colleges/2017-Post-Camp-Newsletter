@@ -89,7 +89,7 @@
 
         closeBt.click(function(event) {
             event.preventDefault();
-            $('body, html').css({'overflow':'auto'});
+            $('body, html').css({'overflow':''});
 
             settings.beforeClose(); //beforeClose
             if (id.hasClass(settings.modalTarget+'-on')) {
