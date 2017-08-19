@@ -411,7 +411,12 @@ var App = function() {
             HeaderHeight = 0;
         }
 
-        $('.fullheight').css('height', WindowHeight - HeaderHeight);
+        if ($(window).width() <= 991) {
+            $('.fullheight').css('height', WindowHeight - HeaderHeight + 113);
+        }
+        else {
+            $('.fullheight').css('height', WindowHeight - HeaderHeight);
+        }
 
         // $(window).resize(function() {
         //     var WindowHeight = $(window).height();
@@ -424,11 +429,11 @@ var App = function() {
     var handleVerticalCenterAligned = function() {
         if ($(window).width() <= 991) {
             $('.vertical-center-aligned').each(function() {
-                $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 3);
+                $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 2 + 113);
             });
             $(window).resize(function() {
                 $('.vertical-center-aligned').each(function() {
-                    $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 3);
+                    $(this).css('padding-top', $(this).parent().height() / 4 - $(this).height() / 2 + 113);
                 });
             });
         }
