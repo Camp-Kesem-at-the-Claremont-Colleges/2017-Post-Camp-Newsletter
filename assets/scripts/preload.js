@@ -22,9 +22,9 @@ $('#quote').append(loadQuote);
 
 // preloading
 $(window).load(function() {
- 
+
     setTimeout(function(){
         $('body').addClass('loaded');
     }, 6000);
- 
+
 });
