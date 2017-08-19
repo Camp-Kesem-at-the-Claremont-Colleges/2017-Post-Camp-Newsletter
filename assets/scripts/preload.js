@@ -22,10 +22,10 @@ $('#quote').append(loadQuote);
 
 // preloading
 $(window).load(function() {
-    if($(window).width() <= 991) {
+    if ($(window).width() <= 991) {
         $( window ).resize(function() {
-            document.querySelector('#loader-wrapper').style.height = $(window).height() + 60 + 'px';
-        }
+            document.querySelector('#loader-wrapper').style.height = $(window).height();
+        })
     }
     setTimeout(function(){
         $('body').addClass('loaded');
