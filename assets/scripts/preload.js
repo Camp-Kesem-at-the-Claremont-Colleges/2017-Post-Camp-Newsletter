@@ -22,9 +22,7 @@ $('#quote').append(loadQuote);
 
 // preloading
 let body = document.querySelector('body');
-body.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-}, false);
+body.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 $(window).load(function() {
     if ($(window).width() <= 991) {
         $( window ).resize(function() {
@@ -33,7 +31,7 @@ $(window).load(function() {
     }
     setTimeout(function(){
         $('body').addClass('loaded');
-        body.removeEventListener('touchmove', preventDefault, false);
+        body.removeEventListener('touchmove', function (e) { e.preventDefault(); }, false);
     }, 6000);
 
 });
