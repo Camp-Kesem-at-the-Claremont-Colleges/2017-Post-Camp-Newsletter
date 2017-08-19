@@ -10,6 +10,13 @@ $("#{{ modal.id }}-modal-button").animatedModal({
     color:'#fff'
 });
 
+$("#get-involved-link-modal-button").animatedModal({
+    modalTarget:'get-involved-modal',
+    animatedIn:'fadeInUp',
+    animatedOut:'fadeOutDown',
+    color:'#fff'
+});
+
 // social-sharing
 $("#share-{{ modal.id }}").jsSocials({
     url: "http://" + hostSite + "/{{ modal.id }}",
@@ -94,6 +101,54 @@ $(window).scroll(function () {
         inView = true;
         makeFinChart();
     }
+});
+
+// bar chart
+var ctx = document.getElementById("fundraising-barchart").getContext('2d');
+    
+var chart = new Chart(ctx, {
+   type: 'bar',
+   data: {
+      labels: ['Individual Donations', 'Grants', 'Corporate Sponsorships', 'College Funding'], // responsible for how many bars are gonna show on the chart
+      // create 12 datasets, since we have 12 items
+      // data[0] = labels[0] (data for first bar - 'Standing costs') | data[1] = labels[1] (data for second bar - 'Running costs')
+      // put 0, if there is no data for the particular bar
+      datasets: [{
+         label: 'Counselors + Coordinators',
+         data: [12492, 0, 0, 0],
+         backgroundColor: '#008FBE'
+      }, {
+         label: 'Advisory Board',
+         data: [2500, 0, 0, 0],
+         backgroundColor: '#00C08A'
+      }, {
+         label: 'Kesem Alumni',
+         data: [476,0, 0, 0],
+         backgroundColor: '#A4D55D'
+      }, {
+         label: 'Grants',
+         data: [0, 2500, 0, 0],
+         backgroundColor: '#FFDB00'
+      }, {
+         label: 'Corporate Sponsorships',
+         data: [0, 0, 1553, 0],
+         backgroundColor: '#000'
+      }, {
+         label: 'College Funding',
+         data: [0, 0, 0, 791],
+         backgroundColor: '#cc181e'
+      },]
+   },
+   options: {
+      scales: {
+         xAxes: [{
+            stacked: true // this should be set to make the bars stacked
+         }],
+         yAxes: [{
+            stacked: true // this also..
+         }]
+      }
+   }
 });
 
 // Core Javascript Initialization
