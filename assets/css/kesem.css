@@ -60,6 +60,7 @@ body {
     background: #fff;
     z-index: 2000;
     overflow: hidden;
+    touch-action: none;
 }
 #loader {
     top: 25%;
