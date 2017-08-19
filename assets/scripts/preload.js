@@ -22,7 +22,7 @@ $('#quote').append(loadQuote);
 
 // preloading
 $(window).load(function() {
-
+    document.querySelector('#loader-wrapper').style.height = $(window).height() + 'px';
     setTimeout(function(){
         $('body').addClass('loaded');
     }, 6000);
