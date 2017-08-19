@@ -31,10 +31,8 @@ var HeaderSectionScroll = function() {
         $(window).scroll(function() {
             if ($('.header-section-scroll .navbar').offset().top > 250) {
                 $('.header-section-scroll .navbar-collapse.in').collapse('hide');
-                $('.header-section-scroll .toggle-icon').addClass('is-clicked');
             } else {
                 $('.header-section-scroll .navbar-collapse.in').collapse('show');
-                $('.header-section-scroll .toggle-icon').removeClass('is-clicked');
             }
         });
 

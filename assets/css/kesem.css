@@ -2,6 +2,16 @@ body {
     overflow-x: hidden;
 }
 
+@media (max-width: 991px) {
+    header {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        transition: top 0.2s ease-in-out;
+    }
+}
+
 .op-b-promo-b-v12 .op-b-promo-b-v12-community {
     display: block;
     text-align: center;
@@ -48,7 +58,7 @@ body {
     width: 100%;
     height: 100%;
     background: #fff;
-    z-index: 1000;
+    z-index: 2000;
 }
 #loader {
     top: 25%;
@@ -734,6 +744,10 @@ h3.empower {
     color: #FDFDFD;
 }
 
+.short-video {
+    height: 200px;
+}
+
 @media(max-width: 767px) {
     .stack-bar-div {
         height: 500px;
@@ -743,5 +757,35 @@ h3.empower {
 @media(min-width: 768px) {
     .stack-bar-div {
         height: 600px;
+    }
+}
+
+@media(max-width: 767px) {
+    .heading-v1 .heading-v1-title {
+        font-size: 35px;
+    }
+}
+
+@media(min-width: 500px) {
+    .short-video {
+        height: 200px;
+    }
+}
+
+@media(max-width: 499px) {
+    .short-video {
+        height: 175px;
+    }
+}
+
+@media(max-width: 399px) {
+    .promo-block-v4 h1.xss-font-45px {
+        font-size: 45px;
+    }
+    .xss-margin-b-0 {
+        margin-bottom: 0;
+    }
+    .short-video {
+        height: 150px;
     }
 }
