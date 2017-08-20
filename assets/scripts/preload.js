@@ -22,13 +22,16 @@ $('#quote').append(loadQuote);
 
 // preloading
 $('#loader-wrapper').on('touchmove', false);
-$(document).ready(function() {
-
-    setTimeout(function(){
-        $('body').addClass('loaded');
-    }, 6000);
-
-});
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         $('body').addClass('loaded');
+      },6000);
+  }
+}
 
 $(window).load(function(){ 
     // video code 
