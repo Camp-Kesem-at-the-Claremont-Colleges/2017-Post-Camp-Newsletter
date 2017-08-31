@@ -1,0 +1,25 @@
+---
+layout: share
+---
+<div id="" class="section-modal article-modal">
+    <div class="row row-both-adjust margin-b-30">
+        <div class="col-sm-10 col-sm-offset-1 article-actions">
+            <span id="btn-close-modal" class="close-modal"> 
+                <a href="/"><button class="fun-btn fun-btn2 btn-base-xs">Home</button></a>
+            </span>
+            <span class="float-right"><a href="/"><img class="article-logo" src="/assets/img/campkesemclaremont.jpg"></a></span>
+        </div>
+    </div>
+    <div class="row row-both-adjust">
+        <div class="modal-row extra-letter-margin">
+            <div class="text-center margin-top-75">
+                <h2 class="font-50px">Songs From Camp!</h2>
+                 <!-- <p><span class="fa fa-pencil"></span> Beemo</p>  -->
+                <div class="share-me" id="share-camp-songs"></div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-md-offset-2 mobile-margin-b margin-b-100 article-format">
+                {% include camp-songs.html %}
+            </div>                    
+        </div>
+    </div>
+</div>
